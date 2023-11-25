@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>KKL</title>
+		<!-- google font -->
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- boxicons -->
+		<link
+			href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<!-- app css -->
+		<link
+			rel="stylesheet"
+			href="./css/grid.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/app.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/allblog.css"
+		/>
+	</head>
+
+	<body>
+		<!-- header -->
+		<header>
+			<!-- mobile menu -->
+			<div class="mobile-menu bg-second">
+				<a
+					href="#"
+					class="mb-logo"
+					>KKLShop</a
+				>
+				<span
+					class="mb-menu-toggle"
+					id="mb-menu-toggle"
+				>
+					<i class="bx bx-menu"></i>
+				</span>
+			</div>
+			<!-- end mobile menu -->
+			<!-- main header -->
+			<div
+				class="header-wrapper"
+				id="header-wrapper"
+			>
+				<span
+					class="mb-menu-toggle mb-menu-close"
+					id="mb-menu-close"
+				>
+					<i class="bx bx-x"></i>
+				</span>
+				<!-- top header -->
+				<div class="bg-second">
+					<div class="top-header container">
+						<ul class="devided">
+							<li>
+								<a href="#">+843456789</a>
+							</li>
+							<li>
+								<a href="#">tlinh@gmail.com</a>
+							</li>
+						</ul>
+						<ul class="devided">
+							<li class="dropdown">
+								<a href="">USD</a>
+								<i class="bx bxs-chevron-down"></i>
+								<ul class="dropdown-content">
+									<li><a href="#">VND</a></li>
+									<li><a href="#">JPY</a></li>
+									<li><a href="#">EUR</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="">ENGLISH</a>
+								<i class="bx bxs-chevron-down"></i>
+								<ul class="dropdown-content">
+									<li><a href="#">VIETNAMESE</a></li>
+									<li><a href="#">JAPANESE</a></li>
+									<li><a href="#">FRENCH</a></li>
+									<li><a href="#">SPANISH</a></li>
+								</ul>
+							</li>
+							<li><a href="#">ORDER TRACKING</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end top header -->
+				<!-- mid header -->
+				<div class="bg-main">
+					<div class="mid-header container">
+						<a
+							href="./index.html"
+							class="logo"
+							>KKLShop</a
+						>
+						<div class="search">
+							<input
+								type="text"
+								placeholder="Search"
+							/>
+							<i class="bx bx-search-alt"></i>
+						</div>
+						<div class="nav-icons">
+							<li>
+								<a href="#"><i class="bx bx-bell"></i></a>
+							</li>
+							<li>
+								<a href="./login.html"
+									><i
+										class="bx bx-user-circle"
+										id="user-circle"
+									></i
+								></a>
+							</li>
+							<li>
+								<a href="#"
+									><i
+										class="bx bx-cart"
+										id="cart-icon"
+									></i
+								></a>
+							</li>
+						</div>
+					</div>
+					<!-- cart -->
+					<div class="cart">
+						<div class="cart-content">
+							<!-- 1 -->
+							<div class="cart-box">
+								<img
+									src="./images/190402_E1_FW19_EarbudsWCase_S13_0033-1_1605x1605_BACK.png"
+									alt=""
+								/>
+								<div class="cart-text">
+									<h3>JBL</h3>
+									<span>$150</span>
+									<span>x1</span>
+								</div>
+								<i class="bx bxs-trash"></i>
+							</div>
+							<!-- 2 -->
+							<div class="cart-box">
+								<img
+									src="./images/JBL_E55BT_KEY_BLACK_6175_FS_x1-1605x1605px.png"
+									alt=""
+								/>
+								<div class="cart-text">
+									<h3>JBL</h3>
+									<span>$150</span>
+									<span>x1</span>
+								</div>
+								<i class="bx bxs-trash"></i>
+							</div>
+							<!-- 3 -->
+							<div class="cart-box">
+								<img
+									src="./images/JBL_Quantum_400_Product Image_Hero 02.png"
+									alt=""
+								/>
+								<div class="cart-text">
+									<h3>JBL</h3>
+									<span>$200</span>
+									<span>x1</span>
+								</div>
+								<i class="bx bxs-trash"></i>
+							</div>
+							<div class="total">
+								<h3>3 Items</h3>
+								<span>Total:$500</span>
+							</div>
+							<a
+								href="#"
+								class="btn"
+								>Proceed To Pay</a
+							>
+						</div>
+					</div>
+				</div>
+				<!-- end mid header -->
+				<!-- bottom header -->
+				<div class="bg-second">
+					<div class="bottom-header container">
+						<ul
+							class="main-menu"
+							id="home"
+						>
+							<li><a href="index.html">Home</a></li>
+							<!-- mega menu -->
+							<li class="mega-dropdown">
+								<a href="./products.html">Shop<i class="bx bxs-chevron-down"></i></a>
+								<div class="mega-content">
+									<div class="row">
+										<div class="col-3 col-md-12">
+											<div class="box">
+												<h3>Categories</h3>
+												<ul>
+													<li><a href="#">Wireless</a></li>
+													<li><a href="#">Inear Headphone</a></li>
+													<li><a href="#">Overear Headphone</a></li>
+													<li><a href="#">Sport Headphone</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-3 col-md-12">
+											<div class="box">
+												<h3>Categories</h3>
+												<ul>
+													<li><a href="#">Wireless</a></li>
+													<li><a href="#">Inear Headphone</a></li>
+													<li><a href="#">Overear Headphone</a></li>
+													<li><a href="#">Sport Headphone</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-3 col-md-12">
+											<div class="box">
+												<h3>Categories</h3>
+												<ul>
+													<li><a href="#">Wireless</a></li>
+													<li><a href="#">Inear Headphone</a></li>
+													<li><a href="#">Overear Headphone</a></li>
+													<li><a href="#">Sport Headphone</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-3 col-md-12">
+											<div class="box">
+												<h3>Categories</h3>
+												<ul>
+													<li><a href="#">Wireless</a></li>
+													<li><a href="#">Inear Headphone</a></li>
+													<li><a href="#">Overear Headphone</a></li>
+													<li><a href="#">Sport Headphone</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="row img-row">
+										<div class="col-3">
+											<div class="box">
+												<img
+													src="./images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png"
+													alt=""
+												/>
+											</div>
+										</div>
+										<div class="col-3">
+											<div class="box">
+												<img
+													src="./images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png"
+													alt=""
+												/>
+											</div>
+										</div>
+										<div class="col-3">
+											<div class="box">
+												<img
+													src="./images/JBL_JR 310BT_Product Image_Hero_Skyblue.png"
+													alt=""
+												/>
+											</div>
+										</div>
+										<div class="col-3">
+											<div class="box">
+												<img
+													src="./images/JBLHorizon_001_dvHAMaster.png"
+													alt=""
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- end mega menu -->
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="about.html">About us</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end bottom header -->
+			</div>
+			<!-- end main header -->
+		</header>
+		<!-- end header -->
+
+		<div class="header">
+			<h2>All Blog</h2>
+		</div>
+
+		<div class="row">
+			<div class="leftcolumn">
+				<div class="card">
+					<div class="blog-img">
+						<img
+							src="./images/JBL_Quantum400_Lifestyle1.png"
+							alt=""
+						/>
+					</div>
+					<div class="blog-info">
+						<div class="blog-title">JBL Quantum 400</div>
+						<div class="blog-preview">Nằm trong dòng tai nghe Gaming đầu tiên của hãng âm thanh nổi tiếng JBL Trang bị công nghệ JBL QuantumSURROUND™ và chuẩn âm thanh vòm DTS Headphone:X 2.0 Công nghệ âm thanh JBL QuantumSOUND Signature độc quyền Micro định hướng Tương thích với nhiều nền tảng</div>
+						<button class="btn-flat btn-hover">Read More</button>
+					</div>
+				</div>
+
+				<
+				<div class="card">
+					<div class="blog-img">
+						<img
+							src="./images/JBL_TUNE220TWS_Lifestyle_black.png"
+							alt=""
+						/>
+					</div>
+					<div class="blog-info">
+						<div class="blog-title">Bluetooth True Wireless JBL Tune 220</div>
+						<div class="blog-preview">Thiết kế earbuds sành điệu, trẻ trung và bắt mắt. Trang bị Bluetooth 5.0 cho kết nối nhanh và ổn định. Chất lượng âm thanh vượt trội với driver 12.5 mm và công nghệ JBL Pure Bass Sound. Thời gian sử dụng 3 giờ, kéo dài tới 16 giờ nếu dùng cùng hộp sạc. JBL - Thương hiệu âm thanh nổi tiếng toàn cầu đến từ Mỹ.</div>
+						<button class="btn-flat btn-hover">Read More</button>
+					</div>
+				</div>
+			</div>
+			<div class="rightcolumn">
+				<div class="card">
+					<h2>About Us</h2>
+					<div class="card">
+						<img
+							src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2023/2/13/base64-16762882456091055988260.png"
+							alt="Mike"
+							style="width: 60%"
+						/>
+					</div>
+					<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+				</div>
+				<div class="card">
+					<h3>Popular Post</h3>
+					<div class="blog-img">
+						<img
+							src="./images/JBL_Quantum400_Lifestyle1.png"
+							alt=""
+						/>
+					</div>
+					<br />
+					<div class="blog-img">
+						<img
+							src="./images/JBLHorizon_001_dvHAMaster.png"
+							alt=""
+						/>
+					</div>
+					<div class="blog-img">
+						<img
+							src="./images/JBL_JR 310BT_Product Image_Hero_Skyblue.png"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="card">
+					<h3>Follow Me</h3>
+					<p>Some text..</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<footer
+			class="bg-second"
+			id="contact"
+		>
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-md-6">
+						<h3 class="footer-head">Products</h3>
+						<ul class="menu">
+							<li><a href="#">Help Center</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">product Help</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Order Status</a></li>
+						</ul>
+					</div>
+					<div class="col-3 col-md-6">
+						<h3 class="footer-head">services</h3>
+						<ul class="menu">
+							<li><a href="#">Help Center</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">product Help</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Order Status</a></li>
+						</ul>
+					</div>
+					<div class="col-3 col-md-6">
+						<h3 class="footer-head">support</h3>
+						<ul class="menu">
+							<li><a href="#">Help Center</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">product Help</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Order Status</a></li>
+						</ul>
+					</div>
+					<div class="col-3 col-md-6 col-sm-12">
+						<div class="contact">
+							<h3 class="contact-header">KKLshop</h3>
+							<ul class="contact-socials">
+								<li>
+									<a href="#">
+										<i class="bx bxl-facebook-circle"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-instagram-alt"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-youtube"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-twitter"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="subscribe">
+							<input
+								type="email"
+								placeholder="ENTER YOUR EMAIL"
+								required
+							/>
+							<button>Subscribe</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+
+		<!-- app js -->
+		<script
+			type="module"
+			src="./js/app.js"
+		></script>
+		<script
+			type="module"
+			src="./js/index.js"
+		></script>
+	</body>
+</html>
