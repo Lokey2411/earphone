@@ -2,6 +2,7 @@ import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.1.1/fi
 import { getData, storeData } from "../firebase.js";
 import { products } from "../../data/product_data.js";
 import { firestore } from "../../firebase/index.js";
+import { renderNode } from "./client_control.js";
 
 // Fetches the buying list of the current user from the local storage
 export const fetchProductData = async () => {
@@ -37,6 +38,8 @@ export const storeProduct = (data) => {
 	};
 	storeData(newUser, "users", user.username);
 	localStorage.setItem("token", JSON.stringify(newUser));
+	//user control
+	renderNode(data);
 };
 
 // Adds a product to the buying list of the current user
@@ -44,16 +47,17 @@ export const addBuyingList = async (id) => {
 	const userID = JSON.parse(localStorage.getItem("token")).username;
 	// console.log(userID);
 	if (userID) {
-		const docRef = doc(firestore, "users", userID);
-		const user = (await getDoc(docRef)).data();
+		const user = JSON.parse(localStorage.getItem("token"));
 		if (user.buyingList) {
-			const prevList = (await getDoc(docRef)).data().buyingList;
+			const prevList = JSON.parse(localStorage.getItem("token")).buyingList;
 			if (!prevList.includes(id)) {
 				storeProduct([...prevList, id]);
 			}
 		} else {
 			let newUser = { ...user, buyingList: [id] };
 			storeData(newUser, "users", user.username);
+			//client control
+			renderNode([id]);
 		}
 		// console.log("Successfully store");
 	} else alert("you have to sign in to use this function");

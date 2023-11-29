@@ -4,14 +4,18 @@ import { removeBuying } from "./server_control.js";
 export const renderNode = (data) => {
 	const rootElem = document.querySelector(".cart-content");
 	if (!data || data.length < 0) return;
-	data.forEach((item) => {
+	data.reduceRight((_, item) => {
 		const deleteItemHandler = () => {
 			productElem.remove();
 			removeBuying(item.id);
+			numberElement.innerHTML = `${data.length - 1} Items`;
+			totalElement.innerHTML = `Total:$${sum - item.curr_price};`;
 		};
 		const productElem = document.createElement("div");
 		productElem.className = "cart-box";
-
+		const deleteItem = document.createElement("i");
+		deleteItem.className = "bx bxs-trash";
+		deleteItem.onclick = deleteItemHandler;
 		productElem.innerHTML += `
 								<img
 									src="${item.image1}"
@@ -24,11 +28,16 @@ export const renderNode = (data) => {
 									<span>x1</span>
 								</div>
                 `;
-		const deleteItem = document.createElement("i");
-		deleteItem.className = "bx bxs-trash";
-		deleteItem.onclick = deleteItemHandler;
-		productElem.prepend(deleteItem);
+
+		productElem.appendChild(deleteItem);
 
 		rootElem.prepend(productElem);
-	});
+	}, null);
+	const numberElement = document.querySelector("#js-control-statistic>h3");
+	const totalElement = document.querySelector("#js-control-statistic>span");
+	const sum = data.reduce((currentValue, currentItem) => {
+		return currentValue + Number(currentItem.curr_price);
+	}, 0);
+	numberElement.innerHTML = `${data.length} Items`;
+	totalElement.innerHTML = `Total:$${sum};`;
 };
