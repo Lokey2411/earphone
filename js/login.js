@@ -46,6 +46,6 @@ signUpHandlerButton?.addEventListener("click", () => {
 	setFormData("password", signUpForm.password.value);
 	setFormData("reEnteredPassword", signUpForm.reEnteredPassword.value);
 	setFormData("email", signUpForm.email.value);
-	console.log(formData);
+	// console.log(formData);
 	signUpHandler(formData);
 });

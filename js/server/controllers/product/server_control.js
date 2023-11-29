@@ -42,7 +42,7 @@ export const storeProduct = (data) => {
 // Adds a product to the buying list of the current user
 export const addBuyingList = async (id) => {
 	const userID = JSON.parse(localStorage.getItem("token")).username;
-	console.log(userID);
+	// console.log(userID);
 	if (userID) {
 		const docRef = doc(firestore, "users", userID);
 		const user = (await getDoc(docRef)).data();
@@ -55,15 +55,14 @@ export const addBuyingList = async (id) => {
 			let newUser = { ...user, buyingList: [id] };
 			storeData(newUser, "users", user.username);
 		}
-		console.log("Successfully store");
+		// console.log("Successfully store");
 	} else alert("you have to sign in to use this function");
 };
 
 // Removes a product from the buying list of the current user
 export const removeBuying = (id) => {
-	const userID = JSON.parse(localStorage.getItem("token")).username;
-	const prevList = doc(firestore, "users", userID);
-	storeProduct([prevList.filter((item) => item !== id), id]);
+	const { buyingList } = JSON.parse(localStorage.getItem("token"));
+	storeProduct(buyingList.filter((item) => item !== id));
 };
 //
 //This code provides functions for managing a user's buying list. The buying list is stored in local storage of the user browser. The functions allow the user to fetch their buying list, create new products, add products to their buying list, and remove products from their buying list..</s>
