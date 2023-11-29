@@ -17,7 +17,7 @@ You just run the `git clone https://github.com/Lokey2411/earphone.git` to import
 
 run `npm install` to install all dependencies in this project
 
-### Run the dev ser ver
+### Run the dev server
 
 -   run `node js/NodeJS_App.js` to run dev server
 -   go to dev server: `http://localhost:3000/`
