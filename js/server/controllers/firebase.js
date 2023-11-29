@@ -1,13 +1,11 @@
-import { doc, setDoc, query, where, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+import { doc, setDoc, query, where, getDocs, collection, getDoc } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
 import { firestore } from "../firebase/index.js";
 import { ROLES } from "../data/roles.js";
+import { verifyEmail } from "./rules.js";
 
 export const logInHandler = async (username, password) => {
 	// Perform login logic here using the username and password
-	alert(username);
-	alert(password);
-	let docRef,
-		docSnap,
+	let docSnap,
 		isExisted = false;
 	const userCollectionRef = collection(firestore, "users");
 	const field = username.includes("@") ? "email" : "username";
@@ -40,12 +38,20 @@ export const logInHandler = async (username, password) => {
 	// console.log("Login successful!");
 };
 
-export const signUpHandler = (formData = { username, email, password, reEnteredPassword }) => {
+export const signUpHandler = async (formData = { username, email, password, reEnteredPassword }) => {
 	// Perform sign up logic here using the username and password
+	//catch username has exist error
 	const docRef = doc(firestore, "users", formData.username);
-	const isValid = formData.password.length >= 9 && formData.password === formData.reEnteredPassword;
+	const docSnap = (await getDoc(docRef)).data();
+	//catch email exist error
+	const userCollectionRef = collection(firestore, "users");
+	const q = query(userCollectionRef, where("email", "==", formData.email));
+	const { docs } = await getDocs(q);
+	const dataIsExist = docs.length > 0;
+	if (dataIsExist) console.log(docs[0]);
+	const isValid = formData.password.length >= 9 && formData.password === formData.reEnteredPassword && verifyEmail(formData.email) && !docSnap && !dataIsExist;
+
 	if (isValid) {
-		//sign up successfully
 		console.log("Sign up successful!");
 		// const { user } = createUserWithEmailAndPassword(auth, username, password);
 		setDoc(docRef, {
@@ -54,10 +60,16 @@ export const signUpHandler = (formData = { username, email, password, reEnteredP
 		});
 	} else {
 		if (formData.password.length < 9) alert("Invalid information. Your password has less than 9 letters ");
-		else if (formData.password !== formData.reEnteredPassword) alert("Invalid information. Password does not match");
-		console.log(formData.password, formData.reEnteredPassword);
+		if (formData.password !== formData.reEnteredPassword) alert("Invalid information. Password does not match");
+		if (!verifyEmail(formData.email)) alert("Invalid information. Wrong email");
+		if (dataIsExist || !!docSnap) alert("Your account has been existed");
+		return;
 	}
 
 	// Example: Display a success message
 	// console.log("Sign up successful!");
 };
+
+export const storeData = async (data, path, id = "") => await setDoc(doc(firestore, path, id), data);
+
+export const getData = async (path, id) => (await getDoc(doc(firestore, path, id))).data();
