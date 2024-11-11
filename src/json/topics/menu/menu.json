@@ -1,0 +1,19 @@
+[
+	{
+		"id": 7,
+		"parentTopicId": 2,
+		"title": "Đồ uống",
+		"link": "/do-uong",
+		"type": "sub topic",
+		"created_at": "2024-04-19T09:06:15.000000Z",
+		"updated_at": "2024-04-19T09:06:15.000000Z",
+		"parentTopic": { "id": 2, "parentTopicId": 2, "title": "Menu", "link": "#", "type": "navbar", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" },
+		"subTopics": [
+			{ "id": 10, "parentTopicId": 7, "title": "Cà phê", "link": "/do-uong/Cà phê", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z", "parentTopic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" }, "subTopics": [], "parent_topic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" } },
+			{ "id": 11, "parentTopicId": 7, "title": "Đồ uống ủ lạnh", "link": "/do-uong/Đồ uống ủ lạnh", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z", "parentTopic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" }, "subTopics": [], "parent_topic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" } },
+			{ "id": 12, "parentTopicId": 7, "title": "Trà sữa", "link": "/do-uong/Trà sữa", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z", "parentTopic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" }, "subTopics": [], "parent_topic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" } },
+			{ "id": 13, "parentTopicId": 7, "title": "Bộ sưu tập trà theo mùa", "link": "/do-uong/Bộ sưu tập trà theo mùa", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z", "parentTopic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" }, "subTopics": [], "parent_topic": { "id": 7, "parentTopicId": 2, "title": "Đồ uống", "link": "/do-uong", "type": "sub topic", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" } }
+		],
+		"parent_topic": { "id": 2, "parentTopicId": 2, "title": "Menu", "link": "#", "type": "navbar", "created_at": "2024-04-19T09:06:15.000000Z", "updated_at": "2024-04-19T09:06:15.000000Z" }
+	}
+]

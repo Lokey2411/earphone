@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Inter"; /*Can be any text*/
+	src: local("Inter"), url("../src/font/Inter/static/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter Extrabold";
+	src: local("Inter Extrabold"), url("../src/font/Inter/static/Inter-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Inter Semibold";
+	src: local("Inter Semibold"), url("../src/font/Inter/static/Inter-SemiBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Inter Bold";
+	src: local("Inter Bold"), url("../src/font/Inter/static/Inter-Bold.ttf") format("truetype");
+}
+
+.css-content a {
+	color: #1e89dd !important;
+}
+
+body h1 {
+	line-height: 1.2;
+}
+
+a:hover,
+a:active,
+a:visited,
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#giaohang-desktop {
+	.slick-dots {
+		bottom: -30px;
+	}
+	.slick-track {
+		display: flex;
+		gap: 40px;
+	}
+}
+#giaohang {
+	.slick-prev,
+	.slick-next {
+		position: unset;
+	}
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+}
+#slider-tim-kiem-cua-hang-desktop {
+	.slick-track {
+		display: flex;
+		gap: 50px;
+	}
+}
+#slider-tim-kiem-cua-hang {
+	.slick-track {
+		display: flex;
+		gap: 16px;
+	}
+}
+#slider-detail-food-desktop {
+	button {
+		background-color: transparent;
+	}
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 1rem;
+	}
+}
+#slider-detail-food {
+	button {
+		background-color: transparent;
+	}
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+}
+#slider-next-news {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 1rem;
+	}
+}
+#slider-next-news-desktop {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 32px;
+	}
+}
+#slider-san-pham {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 40px;
+	}
+}
+#about-us {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 15px;
+	}
+}
+#about-us-desktop {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 40px;
+	}
+}
+#news-center-arrow {
+	:hover {
+		svg {
+			path#inner-arrow {
+				stroke: #006241;
+			}
+			path#outer-border {
+				stroke: white;
+			}
+			path {
+				fill: #006241;
+			}
+		}
+	}
+}
+
+#company-file-search::placeholder {
+	font-style: italic;
+}
+
+#navbar-desktop a:hover {
+	color: #06542d;
+}
+
+#work-style {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 32px;
+	}
+}
+
+#mission-and-value {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 32px;
+	}
+	.slick-slide {
+		transition: transform 0.5s ease;
+	}
+
+	.slick-center .slick-slide img {
+		transform: scale(1.2); /* Tăng kích thước slide ở giữa */
+	}
+}
+
+#franchies-slider-1 {
+	.slick-dots {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		padding: 0;
+		margin: 80px;
+	}
+
+	.slick-dots li button:before {
+		font-size: 10px;
+		color: white; /* Màu mặc định của dot */
+		opacity: 1;
+	}
+
+	/* Đổi màu của dot khi được chọn */
+	.slick-dots li.slick-active button:before {
+		color: #006241; /* Màu của dot khi được chọn */
+	}
+}
+
+#franchies-slider-2 {
+	.slick-next:before,
+	.slick-prev:before {
+		content: none;
+	}
+	.slick-track {
+		display: flex;
+		gap: 70px;
+	}
+	.slick-slide {
+		transition: transform 0.5s ease;
+	}
+
+	.slick-center .slick-slide img {
+		transform: scale(1.2);
+	}
+}
+
+.slick-dots li button:before,
+.slick-dots li button,
+.slick-dots li {
+	width: 30px;
+	height: 30px;
+	list-style: none;
+}
+
+* {
+	scroll-behavior: smooth;
+}
