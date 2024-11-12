@@ -3,7 +3,7 @@ const { db } = require("../db/config");
 const router = Express.Router();
 
 router.get("/", async (req, res) => {
-	const sql = "SELECT * FROM questions";
+	const sql = "SELECT * FROM questions GROUP BY type";
 	try {
 		const [query] = await db.query(sql);
 		return res.status(200).json(query);
@@ -46,6 +46,18 @@ router.delete("/:id", async (req, res) => {
 		const [query] = await db.query(sql, values);
 		return res.status(200).json("delete question successfully");
 	} catch (error) {
+		return res.status(500).json("Internal server error");
+	}
+});
+
+router.get("/search/:field", async (req, res) => {
+	const { field } = req.params;
+	const value = req.query[field];
+	try {
+		const [query] = await db.query(`SELECT * FROM questions WHERE ${field} = ?`, [value]);
+		return res.status(200).json(query);
+	} catch (error) {
+		console.error(error);
 		return res.status(500).json("Internal server error");
 	}
 });

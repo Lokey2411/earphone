@@ -4,7 +4,17 @@ const getAlluser = async (req, res) => {
 	try {
 		const sql = "SELECT * FROM users";
 		const [query] = await db.query(sql);
-		return res.status(200).json({ data: query });
+		return res.status(200).json(query);
+	} catch (error) {
+		return res.status(500).json({ error: "Database error" });
+	}
+};
+const getUser = async (req, res) => {
+	try {
+		const { id } = req.params;
+		const sql = "SELECT * FROM users WHERE id = ?";
+		const [query] = await db.query(sql, [id]);
+		return res.status(200).json(query);
 	} catch (error) {
 		return res.status(500).json({ error: "Database error" });
 	}
@@ -77,6 +87,7 @@ const updateUser = async (req, res) => {
 
 module.exports = {
 	getAlluser,
+	getUser,
 	createUser,
 	destroyUser,
 	changePassword,

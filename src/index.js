@@ -2,6 +2,15 @@ const express = require("express");
 const app = express();
 const routes = require("./route");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
+app.use(
+	cors({
+		origin: ["http://localhost:3000", "http://localhost:8080"],
+		credentials: true,
+	})
+);
+
 app.use(bodyParser.json());
 app.get("/", (req, res) => {
 	res.send("Hello World!");

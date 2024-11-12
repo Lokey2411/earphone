@@ -13,10 +13,10 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-	const { departmentId, name, remain, shortDesc, price, image, type, listname } = req.body;
+	const {  name, remain, shortDesc, price, image, type, listname } = req.body;
 
-	const sql = "INSERT INTO products (departmentId, name, remain, shortDesc, price, image, type, listname) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-	const values = [departmentId, name, remain, shortDesc, price, image, type, listname];
+	const sql = "INSERT INTO products ( name, remain, shortDesc, price, image, type, listname) VALUES ( ?, ?, ?, ?, ?, ?, ?)";
+	const values = [ name, remain, shortDesc, price, image, type, listname];
 	try {
 		// check if listname is exist
 		const [list] = await db.query("SELECT * FROM product_lists WHERE name = ?", [listname]);
