@@ -37,7 +37,10 @@ export const getData = async (url) => {
 				"Content-Type": "application/json",
 			},
 		})
-		.catch(console.log);
-	const data = JSON.parse(decodeEntities(res.data));
+		.catch((err) => {
+			console.log(err);
+		});
+	// console.log(res.data);
+	const data = res.data;
 	return data;
 };
